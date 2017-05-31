@@ -1,21 +1,22 @@
-  <div class="bar bar-header bar-balanced">
+  <center><div class="bar bar-header bar-balanced">
   <h1 class="title">Header</h1>
 </div>
-<form ng-submit="dologin()">
+<form ng-submit="doLogin()">
   <div class="list bar-subheader">
   <label class="item item-input">
     <span class="input-label">Username</span>
-    <input type="text">
+    <input type="text" ng-model="login.username">
   </label>
   <label class="item item-input">
     <span class="input-label">Password</span>
-    <input type="password">
+    <input type="password" ng-model="login.password">
   </label>
+  <button class="button">
+  LOGIN
+</button>
 </div>
 <button type="submit">Log in </button>
 <div class="bar bar-footer bar-balanced">
-<a ui-sref="history"><button class="button">
-  LOGIN
-</button></a>
+
   <div class="title">Footer</div>
 </div>

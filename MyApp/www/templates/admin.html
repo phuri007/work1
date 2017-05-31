@@ -1,0 +1,28 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <a class="button icon-left ion-ios-arrow-left button-clear button-dark" href="#/tab/main">ย้อนกลับ</a>
+    <h1 class="title">ผู้ดูแลระบบ</h1>
+    <a class="button button-icon icon ion-person-add" href="#/tab/admin-create"></a>
+  </ion-header-bar>
+  <ion-content >
+
+
+    <ion-list ng-controller="AdminCtrl">
+      <ion-item class="item item-icon-left item-icon-right" ng-repeat="x in  showAdmins"
+      href="#/tab/admin-edit/{{x.admin_id}}">
+      <i class="icon ion-person"></i>
+      {{x.admin_user}}
+      <a class="button button-icon icon ion-ios-trash-outline" ng-click="delAdmin({{x.admin_id}})"></a>
+
+    </ion-item>
+
+  </ion-list>
+
+
+
+
+
+
+
+</ion-content>
+</ion-view>
